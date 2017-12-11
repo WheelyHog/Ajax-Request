@@ -7,14 +7,28 @@
 </head>
 <body>
     <div>
-     <button id="request">Send HTTP Request</button>
+        <select name="city" id="city">
+            <option value="Kiev">Kiev</option>
+            <option value="Ivano-Frankivsk">Ivano-Frankivsk</option>
+            <option value="Lviv">Lviv</option>
+            <option value="Dnepr">Dnepr</option>
+        </select>
+
+     <!--<button id="request">Send HTTP Request</button>-->
         <div id="response">
-        <div id="key">Name: <br> Profession: <br> Age:
+        <div id="key">City: <br> Temperature: <br> Wind Speed: <br> Img:
         </div>
-        <div id="value"></div>
+        <div id="value">
+            <div id="town"></div>
+            <div id="temp"></div>
+            <div id="wind"></div>
+            <div><img id="img" src="" alt=""></div>
+        </div>
         </div>
     </div>
-    <div id="inner"></div>
+    <div id="inner">
+
+    </div>
     <script src="jquery-3.2.1.min.js"></script>
     <script src="script.js"></script>
 </body>
