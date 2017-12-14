@@ -6,23 +6,25 @@ $('select').change(function () {
     $( "select option:selected" ).each(function() {
         city = $( this ).text();
 
-        console.log(city);
-    });
+         });
 
     $.ajax({url: requestUrl,
            data: {'q' : city} })
         .done (function (response) {
-            console.log(response);
-            console.log($('#town'));
+
             $('#town').get(0).innerHTML = response.location.name;
             $('#temp').get(0).innerHTML = response.current.temp_c;
             $('#wind').get(0).innerHTML = response.current.wind_kph;
             $('#img').get(0).src = response.current.condition.icon;
 
-            console.log(response.current.temp_c);
+
         })
-        .fail (function (response) {
-            inner.get(0).innerHTML = 'An error occurred during your request: ' +  response.status + ' ' + response.statusText;
-        })
+        .fail (function () {
+            $('#town').get(0).innerHTML = 'N/A';
+            $('#temp').get(0).innerHTML = 'N/A';
+            $('#wind').get(0).innerHTML = 'N/A';
+            $('#img').get(0).src = '#';
+
+             })
 
 })
