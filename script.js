@@ -1,5 +1,5 @@
 
-var requestUrl = 'http://api.apixu.com/v1/current.json?key=087ab95ab1a146eaaf294757170412';
+var requestUrl = 'https://api.apixu.com/v1/current.json?key=087ab95ab1a146eaaf294757170412';
 var city = '';
 
 $('select').change(function () {
